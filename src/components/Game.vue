@@ -28,9 +28,9 @@ function changeFristName() {
 }
 
 let [qiong, ling] = toRefs(games)
-console.log(qiong.value, ling.value);
+console.log(qiong.value, ling.value)
 let genshin = toRef(games, 2)
-console.log(genshin.value);
+console.log(genshin.value)
 
 function changeGames() {
     const newGames = [{
@@ -53,9 +53,5 @@ function changeGames() {
     box-shadow: 0 0 10px;
     border-radius: 10px;
     padding: 20px;
-}
-
-button {
-    margin: 0 5px;
 }
 </style>
