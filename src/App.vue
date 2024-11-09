@@ -1,89 +1,45 @@
 <template>
-    <div class="app">
-        <h1>你好Vue3</h1>
-        <!-- <Effect />
-        <Person />
-        <Game />
-        <Name />
-        <Car />
-        <Sum /> -->
-        <Son ref="child" />
-
-        <div>
-            <button @click="showChild">Show Child</button>
-        </div>
-
-        <div class="navigate">
-            <RouterLink active-class="hover" :to="{ path: '/home' }">首页</RouterLink>
-            <RouterLink active-class="hover" :to="{ name: 'dongtai' }">动态</RouterLink>
-            <RouterLink active-class="hover" to="/about">关于</RouterLink>
-        </div>
-
-        <div class="content">
-            <RouterView></RouterView>
-        </div>
-    </div>
+	<div class="container-fluid wraper">
+		<h1 class="title">
+			Vue3 组件间通信
+		</h1>
+		<hr>
+		<div class="row">
+			<div class="col-xs-3 col-md-3 col-lg-3 col-xl-3">
+				<!-- 导航区 -->
+				<router-link active-class="active" class="list-group-item" to="/props">1. props</router-link>
+				<router-link active-class="active" class="list-group-item" to="/event">2. 自定义事件</router-link>
+				<router-link active-class="active" class="list-group-item" to="/mitt">3. mitt</router-link>
+				<router-link active-class="active" class="list-group-item" to="/model">4. v-model</router-link>
+				<router-link active-class="active" class="list-group-item" to="/attrs">5. $attrs</router-link>
+				<router-link active-class="active" class="list-group-item" to="/ref-parent">6. <span class="small">$refs、$parent</span></router-link>
+				<router-link active-class="active" class="list-group-item" to="/provide-inject">7. provide、inject</router-link>
+				<router-link active-class="active" class="list-group-item" to="/pinia">8. pinia</router-link>
+				<router-link active-class="active" class="list-group-item" to="/slot">9. slot</router-link>
+			</div>
+			<div class="col-xs-9 col-md-9 col-lg-9 col-xl-9">
+				<div class="panel-body">
+					<!-- 占位一个展示区 -->
+					<router-view></router-view>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
-<script lang="ts" name="App" setup>
-import { ref } from 'vue'
-import { RouterView, RouterLink } from 'vue-router'
-
-import Person from '@/components/Person.vue'
-import Effect from '@/components/Effect.vue'
-import Game from '@/components/Game.vue'
-import Name from '@/components/Name.vue'
-import Car from '@/components/Car.vue'
-import Sum from '@/components/Sum.vue'
-import Son from '@/components/Son.vue'
-
-let child = ref()
-
-function showChild() {
-    console.log(child.value);
-}
+<script setup lang="ts" name="App">
 </script>
 
 <style>
-.app {
-    display: grid;
-    background-color: #ddd;
-    box-shadow: 0 0 10px;
-    border-radius: 10px;
-    padding: 20px;
-    row-gap: 20px;
-}
-
-button {
-    margin-right: 5px;
-}
-
-.navigate {
-    background-color: #333;
-    overflow: hidden;
-    padding: 10px 0;
-}
-
-.navigate a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.navigate .hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.content {
-    background-color: #f2f2f2;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+	.wraper .title {
+		padding: 20px;
+		text-align: center;
+		min-width: 610px;
+	}
+	.wraper .small{
+		font-size: 15px;
+	}
+	.wraper .list-group-item {
+		min-width: 230px;
+	}
 </style>
