@@ -7,12 +7,15 @@
 	</div>
 </template>
 
-<script setup lang="ts" name="Father">
+<script lang="ts" name="Father" setup>
 import Child from './Child.vue'
+
 import { ref } from 'vue'
+
 // 数据
 let car = ref('奔驰')
 let toy = ref('')
+
 // 方法
 function getToy(value: string) {
 	toy.value = value

@@ -4,7 +4,7 @@
     <input type="text" :value="mima" @input="emit('update:mima', (<HTMLInputElement>$event.target).value)">
 </template>
 
-<script setup lang="ts" name="AtguiguInput">
+<script lang="ts" name="AtguiguInput" setup>
 defineProps(['modelValue', 'mima'])
 const emit = defineEmits(['update:modelValue', 'update:mima'])
 </script>

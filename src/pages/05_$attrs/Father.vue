@@ -9,7 +9,7 @@
 	</div>
 </template>
 
-<script setup lang="ts" name="Father">
+<script lang="ts" name="Father" setup>
 import Child from './Child.vue'
 import { ref } from 'vue'
 

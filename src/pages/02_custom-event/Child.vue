@@ -6,10 +6,12 @@
 	</div>
 </template>
 
-<script setup lang="ts" name="Child">
-import { ref } from "vue";
+<script lang="ts" name="Child" setup>
+import { ref } from 'vue'
+
 // 数据
 let toy = ref('奥特曼')
+
 // 声明事件
 const emit = defineEmits(['send-toy'])
 </script>

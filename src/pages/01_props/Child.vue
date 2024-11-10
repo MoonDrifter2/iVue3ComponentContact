@@ -7,10 +7,12 @@
 	</div>
 </template>
 
-<script setup lang="ts" name="Child">
+<script lang="ts" name="Child" setup>
 import { ref } from 'vue'
+
 // 数据
 let toy = ref('奥特曼')
+
 // 声明接收props
 defineProps(['car', 'sendToy'])
 </script>

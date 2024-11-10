@@ -6,8 +6,9 @@
 	</div>
 </template>
 
-<script setup lang="ts" name="Child1">
+<script lang="ts" name="Child1" setup>
 import { ref } from 'vue'
+
 import emitter from '@/utils/emitter'
 
 // 数据

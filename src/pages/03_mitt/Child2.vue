@@ -6,8 +6,9 @@
 	</div>
 </template>
 
-<script setup lang="ts" name="Child2">
+<script lang="ts" name="Child2" setup>
 import { ref, onUnmounted } from 'vue'
+
 import emitter from '@/utils/emitter'
 
 // 数据
@@ -18,6 +19,7 @@ let toy = ref('')
 emitter.on('send-toy', (value: any) => {
 	toy.value = value
 })
+
 // 在组件卸载时解绑send-toy事件
 onUnmounted(() => {
 	emitter.off('send-toy')

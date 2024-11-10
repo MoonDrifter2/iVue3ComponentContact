@@ -11,7 +11,7 @@
 	</div>
 </template>
 
-<script setup lang="ts" name="GrandChild">
+<script lang="ts" name="GrandChild" setup>
 defineProps(['a', 'b', 'c', 'd', 'x', 'y', 'updateA'])
 </script>
 

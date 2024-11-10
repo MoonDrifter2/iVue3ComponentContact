@@ -7,11 +7,14 @@
 	</div>
 </template>
 
-<script setup lang="ts" name="Father">
+<script lang="ts" name="Father" setup>
 import Child from './Child.vue'
-import { ref } from "vue";
+
+import { ref } from 'vue'
+
 // 数据
 let toy = ref('')
+
 // 用于保存传递过来的玩具
 function saveToy(value: string) {
 	console.log('saveToy', value)
